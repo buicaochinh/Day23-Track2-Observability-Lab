@@ -1,6 +1,6 @@
 # Day 23 Lab Reflection
 
-**Student:** buicaochinh
+**Student:** Bùi Cao Chinh - **Mã HV:** 2A202600001
 **Submission date:** 2026-05-11
 **Lab repo URL:** [Day23-Track2-Observability-Lab](https://github.com/buicaochinh/Day23-Track2-Observability-Lab)
 
