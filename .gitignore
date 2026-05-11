@@ -6,11 +6,12 @@ __pycache__/
 venv/
 .pytest_cache/
 
-# Lab artifacts (generated)
-benchmarks/*.csv
-benchmarks/*.json
-submission/screenshots/*.png
-submission/screenshots/*.jpg
+# Lab artifacts (allow screenshots and reports)
+!submission/screenshots/*.png
+!submission/screenshots/*.jpg
+!04-drift-detection/reports/drift-report.html
+!04-drift-detection/reports/drift-summary.json
+!00-setup/setup-report.json
 
 # Local OS junk
 .DS_Store

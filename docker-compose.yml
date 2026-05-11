@@ -55,7 +55,13 @@ services:
     volumes:
       - ./02-prometheus-grafana/alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
     environment:
-      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-https://hooks.slack.com/services/REPLACE/ME}
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL}
+    entrypoint:
+      - sh
+      - -c
+      - |
+        sed "s|{{ env \"SLACK_WEBHOOK_URL\" }}|$${SLACK_WEBHOOK_URL}|g" /etc/alertmanager/alertmanager.yml > /tmp/alertmanager.yml &&
+        /bin/alertmanager --config.file=/tmp/alertmanager.yml --storage.path=/alertmanager
     networks: [obs]
 
   grafana:

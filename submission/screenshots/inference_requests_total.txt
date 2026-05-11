@@ -1,0 +1,4 @@
+curl -s http://localhost:8000/metrics | grep inference_requests_total
+# HELP inference_requests_total Total inference requests
+# TYPE inference_requests_total counter
+inference_requests_total{model="llama3-mock",status="ok"} 1079.0
